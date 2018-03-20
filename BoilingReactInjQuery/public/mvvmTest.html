@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- 使用单向数据流、响应式、函数式编程   -->
+    <!-- view@html = f@Render(ViewModel )  
+        ViewModel = f@State(Model)
+        使用ViewModel这个中间量是为了解耦View和Model,
+        ### 纯函数使用大驼峰命名。
+        Model -> ViewModel -> View 构成了现实后台数据的 单向数据流。
+
+        不在函数内使用This。
+    -->
+    <script>
+        var View = {};
+        var Model = {};
+        var State = {}; //函数集
+        var ViewModel = { Number: 0 }; // 仅用于声明，State函数需要建立新的VM。
+
+        View.Render = function (ViewModel) { //可以转为模板实现，当大部分内容为静态内容时
+            // 获取根元素
+            var DivRoot = document.getElementById("root");
+            // 新建展示数字h1元素
+            var NumEle = document.createElement("h1");
+            NumEle.innerText(ViewModel.Number);
+
+            // 添加
+            DivRoot.appendChild(NumEle);
+        }
+
+        State.CalState = function (Model) {
+            var newMV = Object.create(ViewModel);
+
+            var temp = Model.getDate()["key"];
+            newMV.Number = temp;
+            return newMV;
+        }
+
+        Model.getDate = function () {
+            return { "key": 1000 };
+        }
+
+        View.Render(State.CalState(Model))
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

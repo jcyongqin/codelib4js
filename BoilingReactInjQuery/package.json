@@ -1,0 +1,12 @@
+{
+  "name": "boiling-react-inj-query",
+  "version": "0.0.0",
+  "description": "BoilingReactInjQuery",
+  "main": "app.js",
+  "author": {
+    "name": "wyq"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87"
+  }
+}
