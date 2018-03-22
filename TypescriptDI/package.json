@@ -1,0 +1,12 @@
+{
+  "name": "typescript-di",
+  "version": "0.0.0",
+  "description": "TypescriptDI",
+  "main": "app.js",
+  "author": {
+    "name": "wyq"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.87"
+  }
+}

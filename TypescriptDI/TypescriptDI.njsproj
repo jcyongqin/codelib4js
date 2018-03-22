@@ -2,19 +2,14 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>GeneratorCO</Name>
-    <RootNamespace>GeneratorCO</RootNamespace>
-    <NodeExeArguments>
-    </NodeExeArguments>
-    <NodeExePath>E:\Application\nvm\nvm\v8.9.4\node.exe</NodeExePath>
-    <DebuggerPort>
-    </DebuggerPort>
+    <Name>TypescriptDI</Name>
+    <RootNamespace>TypescriptDI</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b6eaf3b3-9dfb-4bc1-977a-420e95f8aafa</ProjectGuid>
+    <ProjectGuid>549d48e4-4cba-4be7-aaa7-db84ed25a04e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>app.ts</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
@@ -39,16 +34,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <Content Include="package.json" />
-    <Content Include="public\script\app.js.map" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="public\script\app.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="public\" />
-    <Folder Include="public\script\" />
+    <Compile Include="app.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
