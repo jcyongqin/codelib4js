@@ -8,9 +8,13 @@
   },
   "devDependencies": {
     "@types/koa": "^2.0.44",
+    "@types/koa-route": "^3.2.3",
+    "@types/koa-static": "^4.0.0",
     "@types/node": "^6.0.103"
   },
   "dependencies": {
-    "koa": "^2.5.0"
+    "koa": "^2.5.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.2"
   }
 }
